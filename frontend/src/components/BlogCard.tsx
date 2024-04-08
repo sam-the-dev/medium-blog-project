@@ -55,7 +55,7 @@ export function Avatar({
   size,
 }: {
   name: String;
-  size: "big" | "small";
+  size?: "big" | "small";
 }) {
   return (
     <>
