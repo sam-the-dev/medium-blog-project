@@ -3,6 +3,7 @@ dist
 .wrangler
 .dev.vars
 .env
+config.ts
 
 # Change them to your taste:
 package-lock.json

@@ -32,9 +32,12 @@ userRouter.post("/signup", async (c) => {
       },
     });
 
-    const jwt = await sign({ id: user.id }, c.env.secret);
+    console.log(user);
 
-    return c.json({ message: "SignUp Successful !", token: jwt });
+    const jwt = await sign({ id: user.id }, c.env.secret);
+    c.status(200);
+
+    return c.json({ message: "Sign Up Successful !", token: jwt });
   } catch (e) {
     console.log(e);
     return c.json({ message: "An error occured !", error: e });
@@ -66,7 +69,9 @@ userRouter.post("/signin", async (c) => {
       return c.json({ message: "Invalid Credentials" });
     }
 
-    return c.json({ message: "SignIn Successful !" });
+    const jwt = await sign({ id: user.id }, c.env.secret);
+
+    return c.json({ message: "SignIn Successful !", token: jwt });
   } catch (e) {
     console.log(e);
     return c.json({ message: "An error occured !" });
