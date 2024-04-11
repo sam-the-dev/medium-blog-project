@@ -2,6 +2,8 @@ import { Avatar } from "./BlogCard";
 import { Appbar } from "./TopbarComponent";
 import { Blog } from "../hooks";
 
+// p-6 font-medium in the real def
+
 export function FullBlog({ blog }: { blog: Blog }) {
   return (
     <>

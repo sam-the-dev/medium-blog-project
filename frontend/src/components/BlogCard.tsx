@@ -18,7 +18,7 @@ export function BlogCard({
   return (
     <>
       <Link to={`/blog/${id}`}>
-        <div className=" p-5 rounded-sm cursor-pointer">
+        <div className="p-5 rounded-sm cursor-pointer">
           <div className="flex items-center gap-2 pb-2">
             <Avatar name={authorName} size="small" />
             <p className="tracking-wide text-sm font-medium">{authorName}</p>
